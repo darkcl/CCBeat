@@ -62,12 +62,11 @@ static const int LN_SCR_LEFT   =56;
 static const int LN_SCR_RIGHT  =66;
 
 class BMSParser{
-    
-    public:
-        BMSParser(string fileName);
-        CCDictionary *parseMetadata();
-    private:
-        ifstream bmsFile;
+public:
+    BMSParser(string fileName);
+    CCDictionary *parseMetadata();
+private:
+    CCString *bmsFileName;
 };
 
 #endif /* defined(__CCBeat__BMSParser__) */

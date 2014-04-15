@@ -9,8 +9,14 @@
 #include "BMSParser.h"
 
 BMSParser::BMSParser(string fileName){
-    bmsFile.open(fileName);
-    if (!bmsFile.good()) {
-        throw exception();
-    }
+    bmsFileName = CCString::create(fileName);
+}
+
+CCDictionary *BMSParser::parseMetadata(){
+    CCDictionary *result = CCDictionary::create();
+    result->setObject(CCString::create(BP_VERSION), "BMS_Parser_Version");
+    result->setObject(bmsFileName, "filepath");
+    result->setObject(CCString::create("text/x-bemusic"), "mime");
+    
+    return result;
 }

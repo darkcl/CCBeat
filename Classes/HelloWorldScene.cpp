@@ -72,6 +72,9 @@ bool HelloWorld::init()
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
     
+    parser = new BMSParser("example.bms");
+    parser->parseMetadata();
+    
     return true;
 }
 

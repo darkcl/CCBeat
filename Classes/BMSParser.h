@@ -12,13 +12,11 @@
 #include <iostream>
 #include "cocos2d.h"
 
-#include <fstream>
-#include <cstring>
-
 using namespace std;
 using namespace cocos2d;
 
 static const string BP_VERSION         ="0.1";
+
 static const string B_PLAYTYPE         ="PLAYER";      // Play mode
 static const string B_MUSIC_GENRE      ="GENRE";       // Music genre
 static const string B_SCORE_TITLE      ="TITLE";       // Music title
@@ -67,6 +65,11 @@ public:
     CCDictionary *parseMetadata();
 private:
     CCString *bmsFileName;
+    CCString *bmsContent;
+    
+    CCDictionary *mixlevels;
+    CCDictionary *playTypes;
+    CCDictionary *briefRanks;
 };
 
 #endif /* defined(__CCBeat__BMSParser__) */

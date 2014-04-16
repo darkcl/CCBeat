@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E8B0B7118FE572900755558 /* Cytus-Entrance.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B0B6C18FE572900755558 /* Cytus-Entrance.ogg */; };
+		0E8B0B7218FE572900755558 /* Cytus-Entrance.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B0B6C18FE572900755558 /* Cytus-Entrance.ogg */; };
+		0E8B0B7318FE572900755558 /* entrance.bms in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B0B6D18FE572900755558 /* entrance.bms */; };
+		0E8B0B7418FE572900755558 /* entrance.bms in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B0B6D18FE572900755558 /* entrance.bms */; };
+		0E8B0B7518FE572900755558 /* example.bme in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B0B6E18FE572900755558 /* example.bme */; };
+		0E8B0B7618FE572900755558 /* example.bme in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B0B6E18FE572900755558 /* example.bme */; };
+		0E8B0B7718FE572900755558 /* example.bms in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B0B6F18FE572900755558 /* example.bms */; };
+		0E8B0B7818FE572900755558 /* example.bms in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B0B6F18FE572900755558 /* example.bms */; };
+		0E8B0B7918FE572900755558 /* handclap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B0B7018FE572900755558 /* handclap.wav */; };
+		0E8B0B7A18FE572900755558 /* handclap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B0B7018FE572900755558 /* handclap.wav */; };
 		1AC6FB1F180E996B004C840B /* libbox2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFF180E9839004C840B /* libbox2d Mac.a */; };
 		1AC6FB20180E996B004C840B /* libchipmunk Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFD180E9839004C840B /* libchipmunk Mac.a */; };
 		1AC6FB21180E996B004C840B /* libcocos2dx Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2dx Mac.a */; };
@@ -217,6 +227,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E8B0B6C18FE572900755558 /* Cytus-Entrance.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cytus-Entrance.ogg"; sourceTree = "<group>"; };
+		0E8B0B6D18FE572900755558 /* entrance.bms */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = entrance.bms; sourceTree = "<group>"; };
+		0E8B0B6E18FE572900755558 /* example.bme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.bme; sourceTree = "<group>"; };
+		0E8B0B6F18FE572900755558 /* example.bms */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.bms; sourceTree = "<group>"; };
+		0E8B0B7018FE572900755558 /* handclap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = handclap.wav; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
@@ -335,6 +350,18 @@
 			);
 			name = ios;
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		0E8B0B6918FE571300755558 /* BMS files */ = {
+			isa = PBXGroup;
+			children = (
+				0E8B0B6C18FE572900755558 /* Cytus-Entrance.ogg */,
+				0E8B0B6D18FE572900755558 /* entrance.bms */,
+				0E8B0B6E18FE572900755558 /* example.bme */,
+				0E8B0B6F18FE572900755558 /* example.bms */,
+				0E8B0B7018FE572900755558 /* handclap.wav */,
+			);
+			name = "BMS files";
 			sourceTree = "<group>";
 		};
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
@@ -461,6 +488,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0E8B0B6918FE571300755558 /* BMS files */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -635,11 +663,13 @@
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				0E8B0B7718FE572900755558 /* example.bms in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				0E8B0B7318FE572900755558 /* entrance.bms in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
@@ -650,8 +680,11 @@
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
+				0E8B0B7918FE572900755558 /* handclap.wav in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				0E8B0B7118FE572900755558 /* Cytus-Entrance.ogg in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				0E8B0B7518FE572900755558 /* example.bme in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,10 +692,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8B0B7618FE572900755558 /* example.bme in Resources */,
+				0E8B0B7A18FE572900755558 /* handclap.wav in Resources */,
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
+				0E8B0B7218FE572900755558 /* Cytus-Entrance.ogg in Resources */,
+				0E8B0B7418FE572900755558 /* entrance.bms in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
+				0E8B0B7818FE572900755558 /* example.bms in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

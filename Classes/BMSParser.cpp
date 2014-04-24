@@ -40,6 +40,7 @@ CCDictionary *BMSParser::parseMetadata(){
     
     if (bmsContent != NULL) {
         CCArray *rawBMS = bmsContent->componentsSeparatedByString("\n");
+        result->setObject(ccs("100"), "Volume");
         Ref *obj;
         CCARRAY_FOREACH(rawBMS, obj){
             CCString *str = (CCString *)obj;
@@ -50,7 +51,6 @@ CCDictionary *BMSParser::parseMetadata(){
                 
                 CCString *bmsStr = CCString::create(strComp);
                 CCArray *metaInfo = bmsStr->componentsSeparatedByString(" ");
-                CCArray *bmsNote = bmsStr->componentsSeparatedByString(":");
                 
                 if (metaInfo->count() >= 2) {
                     //This line is Meta Info
@@ -65,15 +65,54 @@ CCDictionary *BMSParser::parseMetadata(){
                     }
                     
                     if ( metaHeader->isEqual(StringMake(B_SCORE_TITLE)) ) {
-                        result->setObject(metaInfo->getObjectAtIndex(1), "MusicTitle");
+                        CCString *titleString = ccs("");
+                        if (metaInfo->count() > 3){
+                            //Title Contains space, combain string
+                            for (int i=1; i<metaInfo->count();i++){
+                                if (i==1){
+                                    titleString->appendWithFormat("%@", (CCString *)metaInfo->getObjectAtIndex(i));
+                                }else{
+                                    titleString->appendWithFormat(" %@", (CCString *)metaInfo->getObjectAtIndex(i));
+                                }
+                            }
+                        }else{
+                            titleString = (CCString *)metaInfo->getObjectAtIndex(1);
+                        }
+                        result->setObject(titleString, "MusicTitle");
                     }
                     
                     if ( metaHeader->isEqual(StringMake(B_MUSIC_ARTIST)) ) {
-                        result->setObject(metaInfo->getObjectAtIndex(1), "Artist");
+                        CCString *titleString = ccs("");
+                        if (metaInfo->count() > 3){
+                            //Title Contains space, combain string
+                            for (int i=1; i<metaInfo->count();i++){
+                                if (i==1){
+                                    titleString->appendWithFormat("%@", (CCString *)metaInfo->getObjectAtIndex(i));
+                                }else{
+                                    titleString->appendWithFormat(" %@", (CCString *)metaInfo->getObjectAtIndex(i));
+                                }
+                            }
+                        }else{
+                            titleString = (CCString *)metaInfo->getObjectAtIndex(1);
+                        }
+                        result->setObject(titleString, "Artist");
                     }
                     
                     if ( metaHeader->isEqual(StringMake(B_MUSIC_COARTIST)) ) {
-                        result->setObject(metaInfo->getObjectAtIndex(1), "SubArtist");
+                        CCString *titleString = ccs("");
+                        if (metaInfo->count() > 3){
+                            //Title Contains space, combain string
+                            for (int i=1; i<metaInfo->count();i++){
+                                if (i==1){
+                                    titleString->appendWithFormat("%@", (CCString *)metaInfo->getObjectAtIndex(i));
+                                }else{
+                                    titleString->appendWithFormat(" %@", (CCString *)metaInfo->getObjectAtIndex(i));
+                                }
+                            }
+                        }else{
+                            titleString = (CCString *)metaInfo->getObjectAtIndex(1);
+                        }
+                        result->setObject(titleString, "SubArtist");
                     }
                     
                     if ( metaHeader->isEqual(StringMake(B_MUSIC_BPM)) ) {
@@ -121,10 +160,6 @@ CCDictionary *BMSParser::parseMetadata(){
                     if ( metaHeader->isEqual(StringMake(S_RANDOMIZED)) ) {
                         result->setObject(metaInfo->getObjectAtIndex(1), "RandomizedScore");
                     }
-                }
-                
-                if (bmsNote->count() >= 2) {
-                    //This line is BMS Note Info
                 }
             }
         }
